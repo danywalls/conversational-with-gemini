@@ -35,7 +35,6 @@ export class GeminiService {
           author: this.#kendoIA,
           timestamp: new Date(),
           text: 'Hi! 👋 how I can help you with Kendo ?'
-
   }]);
 
 
@@ -53,7 +52,7 @@ export class GeminiService {
         const result = await this.#model.generateContent({
           contents: [{ role: 'user', parts }],
         });
-        
+
         const response = result.response;
         const text = response.text();
 

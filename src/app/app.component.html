@@ -3,7 +3,7 @@
 </header>
 <main>
   <div class="kendo-chat-area">
-  <kendo-chat [user]="user" [messages]="messages()" (sendMessage)="generate($event)" width="450px">
+  <kendo-chat [user]="user" [messages]="$messages()" (sendMessage)="generate($event)" width="450px">
     <ng-template kendoChatMessageTemplate let-message>
       <div>
       {{ message.text }}
@@ -12,8 +12,6 @@
   </ng-template>
 </kendo-chat>
   </div>
-
-
 </main>
 <footer>
   Build with ❤️ and Kendo

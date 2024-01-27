@@ -19,7 +19,7 @@ export class AppComponent {
 
   geminiService = inject(GeminiService)
   user = this.geminiService.user;
-  messages = this.geminiService.$messages
+  $messages = this.geminiService.$messages
 
   async generate(event: SendMessageEvent) {
     await this.geminiService.generate(event);
